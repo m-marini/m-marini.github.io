@@ -13,11 +13,4 @@ mmarini.init = function() {
 			});
 		}
 	});
-	//	
-	// $("#projects").accordion({
-	// heightStyle : "fill"
-	// });
-	// $("#downloads").accordion({
-	// heightStyle : "content"
-	// });
 };
