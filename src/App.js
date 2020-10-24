@@ -70,6 +70,7 @@ function App() {
             </Card.Body>
             <Card.Footer>
               <ButtonGroup>
+                <Button href="http://www.mmarini.org/atc/" variant="outline-secondary" size="sm">View</Button>
                 <Button href="https://github.com/m-marini/atc" variant="outline-secondary" size="sm">GitHub</Button>
               </ButtonGroup>
             </Card.Footer>
