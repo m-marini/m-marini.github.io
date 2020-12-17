@@ -27,7 +27,7 @@ function App() {
             </Card.Body>
             <Card.Footer>
               <ButtonGroup>
-                <Button href="http://www.mmarini.org//modprog/" variant="outline-secondary" size="sm">View</Button>
+                <Button href="https://m-marini.github.io//modprog/" variant="outline-secondary" size="sm">View</Button>
                 <Button href="https://github.com/m-marini//modprog/" variant="outline-secondary" size="sm">GitHub</Button>
               </ButtonGroup>
             </Card.Footer>
