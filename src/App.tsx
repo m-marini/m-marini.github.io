@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import './App.css';
 import { Navbar, Container, Card, Button, ButtonGroup, CardDeck, Jumbotron } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+export const App: FunctionComponent<{}> = () => {
   return (
-    <div class="bg-light">
+    <div className="bg-light">
       <Navbar bg="dark" variant="dark" expand="lg">
         <Navbar.Brand href="#home">www.mmarini.org</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -117,7 +117,7 @@ function App() {
             </Card.Body>
             <Card.Footer>
               <ButtonGroup>
-                <Button href="http://www.mmarini.org/countdown/" variant="outline-secondary" size="sm">View</Button>
+                <Button href="http://m-marini.github.io/countdown/" variant="outline-secondary" size="sm">View</Button>
               </ButtonGroup>
             </Card.Footer>
           </Card>
@@ -139,7 +139,7 @@ function App() {
       </Container >
 
       <hr />
-      <footer class="text-muted">
+      <footer className="text-muted">
         <Container>
           <p>&copy; Marco Marini</p>
         </Container>
@@ -147,5 +147,3 @@ function App() {
     </div >
   );
 }
-
-export default App;
