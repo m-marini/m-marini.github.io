@@ -102,7 +102,7 @@ export const App: FunctionComponent<{}> = () => {
             </Card.Body>
             <Card.Footer>
               <ButtonGroup>
-                <Button href="http://www.mmarini.org/leibniz/" variant="outline-secondary" size="sm">View</Button>
+                <Button href="https://m-marini.github.io/leibniz/" variant="outline-secondary" size="sm">View</Button>
                 <Button href="https://github.com/m-marini/leibniz" variant="outline-secondary" size="sm">GitHub</Button>
               </ButtonGroup>
             </Card.Footer>
