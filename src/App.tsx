@@ -60,6 +60,9 @@ export const App: FunctionComponent<{}> = () => {
               </ButtonGroup>
             </Card.Footer>
           </Card>
+        </CardDeck>
+        <br />
+        <CardDeck>
 
           <Card border="primary" className="shadow-sm">
             <Card.Body>
@@ -75,9 +78,6 @@ export const App: FunctionComponent<{}> = () => {
               </ButtonGroup>
             </Card.Footer>
           </Card>
-        </CardDeck>
-        <br />
-        <CardDeck>
 
           <Card border="primary" className="shadow-sm">
             <Card.Body>
@@ -104,6 +104,24 @@ export const App: FunctionComponent<{}> = () => {
               <ButtonGroup>
                 <Button href="https://m-marini.github.io/leibniz/" variant="outline-secondary" size="sm">View</Button>
                 <Button href="https://github.com/m-marini/leibniz" variant="outline-secondary" size="sm">GitHub</Button>
+              </ButtonGroup>
+            </Card.Footer>
+          </Card>
+        </CardDeck>
+        <br />
+        <CardDeck>
+
+          <Card border="primary" className="shadow-sm">
+            <Card.Body>
+              <Card.Title>Rocket</Card.Title>
+              <Card.Text>
+                3D rendering of rocket land for Reinforcement Learning AI scalarl project
+              </Card.Text>
+            </Card.Body>
+            <Card.Footer>
+              <ButtonGroup>
+                <Button href="http://m-marini.github.io/rocket/" variant="outline-secondary" size="sm">View</Button>
+                <Button href="https://github.com/m-marini/rocket" variant="outline-secondary" size="sm">GitHub</Button>
               </ButtonGroup>
             </Card.Footer>
           </Card>
