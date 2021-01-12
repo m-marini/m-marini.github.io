@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react';
 import './App.css';
 import { Navbar, Container, Card, Button, ButtonGroup, CardDeck, Jumbotron } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { version } from '../package.json';
 
 export const App: FunctionComponent<{}> = () => {
   return (
@@ -15,7 +16,7 @@ export const App: FunctionComponent<{}> = () => {
 
       <Container>
         <Jumbotron>
-          <h1>Project Portfolio</h1>
+          <h1>Project Portfolio {version}</h1>
         </Jumbotron>
         <CardDeck>
           <Card border="primary" className="shadow-sm">

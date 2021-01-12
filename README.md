@@ -1,4 +1,5 @@
 ![Node.js CI](https://github.com/m-marini/m-marini.github.io/workflows/Node.js%20CI/badge.svg)
+![Deploy](https://github.com/m-marini/m-marini.github.io/workflows/Deploy/badge.svg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
