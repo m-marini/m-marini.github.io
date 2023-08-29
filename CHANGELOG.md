@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [2.1.7] - 2023-08-30
+
 ### Added
 
 - Issue #7: Add fredy entry
