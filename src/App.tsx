@@ -1,168 +1,127 @@
 import React, { FunctionComponent } from 'react';
 import './App.css';
-import { Navbar, Container, Card, Button, ButtonGroup, CardDeck, Jumbotron } from 'react-bootstrap';
+import { Navbar, Container, Card, Button, ButtonGroup, Row, Col, CardGroup } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { version } from '../package.json';
+
+const version = `${process.env.REACT_APP_VERSION}`;
+const date = '';
+
+interface AppData {
+  title: string,
+  text: string,
+  viewUrl?: string,
+  githubUrl: string
+}
+
+const APP_CARDS = [
+  {
+    title: 'Modal Progression',
+    text: 'Create chord progressions on modal scales.',
+    viewUrl: 'https://m-marini.github.io/modprog/',
+    githubUrl: 'https://github.com/m-marini/modprog/'
+  } as AppData, {
+    title: 'Railways',
+    text: 'Switch rails to send trains to the station platforms and then to the right destinations.',
+    githubUrl: 'https://github.com/m-marini/railways/'
+  }, {
+    title: 'Routes',
+    text: 'Connect the cities and simulate the traffics of veicles.',
+    githubUrl: 'https://github.com/m-marini/routes/'
+  }, {
+    title: 'ATC - Air Traffic Control',
+    text: 'Your goal is to manoeuver safely the planes in your air traffic area.',
+    viewUrl: 'https://m-marini.github.io/atc/',
+    githubUrl: 'https://github.com/m-marini/atc'
+  }, {
+    title: 'JConquest',
+    text: 'Manage your space fleets to conquest all planets in the planetery system.',
+    githubUrl: 'https://github.com/m-marini/jconquest'
+  }, {
+    title: 'Leibnitz',
+    text: 'Compute the 3D bodies trajectories by differential equations.',
+    viewUrl: 'https://m-marini.github.io/leibniz/',
+    githubUrl: 'https://github.com/m-marini/leibniz'
+  }, {
+    title: 'Rocket',
+    text: '3D rendering of rocket land for Reinforcement Learning AI scalarl project',
+    viewUrl: 'http://m-marini.github.io/rocket/',
+    githubUrl: 'https://github.com/m-marini/rocket'
+  }, {
+    title: 'Fredy',
+    text: 'Fredy inference engine by fuzzy logic',
+    viewUrl: 'http://m-marini.github.io/fredy-web/',
+    githubUrl: 'https://github.com/m-marini/fredy-web'
+  }, {
+    title: 'Other ...',
+    text: 'Other projects in GitHub',
+    githubUrl: 'https://github.com/m-marini?tab=repositories'
+  }];
+
+const AppList: FunctionComponent<{ apps?: AppData[] }> = ({ apps = [] }) => {
+  return (
+    <CardGroup>
+      <Row xs={1} md={2} xl={3}>
+        {
+          apps.map(({ title, text, viewUrl, githubUrl }, key) => (
+            <Card key={key} border="primary" className="shadow-sm">
+              <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <Card.Text>{text}</Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <ButtonGroup>
+                  {(!!viewUrl) ? (
+                    <Button href={viewUrl} variant="outline-secondary" size="sm">View</Button>
+                  ) : ''
+                  }
+                  <Button href={githubUrl} variant="outline-secondary" size="sm">Github</Button>
+                </ButtonGroup>
+              </Card.Footer>
+            </Card>
+          ))
+        }
+      </Row>
+    </CardGroup>
+  );
+}
 
 export const App: FunctionComponent<{}> = () => {
   return (
-    <div className="bg-light">
-      <Navbar bg="dark" variant="dark" expand="lg">
-        <Navbar.Brand href="#home">www.mmarini.org</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        </Navbar.Collapse>
-      </Navbar>
-
-      <Container>
-        <Jumbotron>
-          <h1>Project Portfolio {version}</h1>
-        </Jumbotron>
-        <CardDeck>
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>Modal Progression</Card.Title>
-              <Card.Text>
-                Create chord progressions on modal scales.
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="https://m-marini.github.io//modprog/" variant="outline-secondary" size="sm">View</Button>
-                <Button href="https://github.com/m-marini//modprog/" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>Railways</Card.Title>
-              <Card.Text>
-                Switch rails to send trains to the station platforms and then to the right destinations.
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="https://github.com/m-marini//railways/" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>Routes</Card.Title>
-              <Card.Text>
-                Connect the cities and simulate the traffics of veicles.
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="https://github.com/m-marini/routes/" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-        </CardDeck>
-        <br />
-        <CardDeck>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>ATC - Air Traffic Control</Card.Title>
-              <Card.Text>
-                <p>Your goal is to manoeuver safely the planes in your air traffic area.</p>
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="https://m-marini.github.io/atc/" variant="outline-secondary" size="sm">View</Button>
-                <Button href="https://github.com/m-marini/atc" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>JConquest</Card.Title>
-              <Card.Text>
-                Manage your space fleets to conquest all planets in the planetery system.
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="https://github.com/m-marini/jconquest" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>Leibnitz</Card.Title>
-              <Card.Text>
-                Compute the 3D bodies trajectories by differential equations.
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="https://m-marini.github.io/leibniz/" variant="outline-secondary" size="sm">View</Button>
-                <Button href="https://github.com/m-marini/leibniz" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-        </CardDeck>
-        <br />
-        <CardDeck>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>Rocket</Card.Title>
-              <Card.Text>
-                3D rendering of rocket land for Reinforcement Learning AI scalarl project
-              </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="http://m-marini.github.io/rocket/" variant="outline-secondary" size="sm">View</Button>
-                <Button href="https://github.com/m-marini/rocket" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>Count down</Card.Title>
-              <Card.Text>
-                My favorite count down
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="http://m-marini.github.io/countdown/" variant="outline-secondary" size="sm">View</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-
-          <Card border="primary" className="shadow-sm">
-            <Card.Body>
-              <Card.Title>Other ...</Card.Title>
-              <Card.Text>
-                Other projects in GitHub
-                </Card.Text>
-            </Card.Body>
-            <Card.Footer>
-              <ButtonGroup>
-                <Button href="https://github.com/m-marini?tab=repositories" variant="outline-secondary" size="sm">GitHub</Button>
-              </ButtonGroup>
-            </Card.Footer>
-          </Card>
-        </CardDeck>
-      </Container >
-
-      <hr />
-      <footer className="text-muted">
-        <Container>
-          <p>&copy; Marco Marini</p>
-        </Container>
-      </footer>
-    </div >
+    <Container fluid>
+      <Row>
+        <Col>
+          <Navbar bg="dark" variant="dark" expand="lg">
+            <Navbar.Brand href="#home">www.mmarini.org</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+            </Navbar.Collapse>
+          </Navbar>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Container>
+            <Row>
+              <Card className="bg-secondary-subtle">
+                <Card.Header >
+                  <h1 className="text-center">Project Portfolio {version} {date}</h1>
+                </Card.Header>
+              </Card>
+            </Row >
+            <Row>
+              <AppList apps={APP_CARDS}></AppList>
+            </Row>
+            <Row>
+              <Col>
+                <hr />
+                <footer className="text-muted">
+                  <p>&copy; Marco Marini</p>
+                </footer>
+              </Col>
+            </Row>
+          </Container >
+        </Col>
+      </Row>
+    </Container>
   );
 }
