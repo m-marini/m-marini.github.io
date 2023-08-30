@@ -1,0 +1,91 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1693387399026,
+    "data": [
+        {
+            "type": "file",
+            "name": "asset-manifest.json",
+            "size": 369,
+            "hash": "c00ed1612544cfdc2476e5b77849c6256200a5c13167110d8f6c143f0ccb6ac7"
+        },
+        {
+            "type": "file",
+            "name": "favicon.ico",
+            "size": 3150,
+            "hash": "ffc65885a2121141440d345ef5927c4c2917d95b5b2913b7fa8467c95e15120b"
+        },
+        {
+            "type": "file",
+            "name": "index.html",
+            "size": 650,
+            "hash": "9b54a04e157835700249e9760fde0c80a8db0ff7e0c37ad367f7cc096c533296"
+        },
+        {
+            "type": "file",
+            "name": "logo192.png",
+            "size": 5347,
+            "hash": "c386396ec70db3608075b5fbfaac4ab1ccaa86ba05a68ab393ec551eb66c3e00"
+        },
+        {
+            "type": "file",
+            "name": "logo512.png",
+            "size": 9664,
+            "hash": "9ea4f4da7050c0cc408926f6a39c253624e9babb1d43c7977cd821445a60b461"
+        },
+        {
+            "type": "file",
+            "name": "manifest.json",
+            "size": 492,
+            "hash": "50b3d8c3903af3f78d871b94557ab14f4e39ca192eaca3d2cfa863c867279a14"
+        },
+        {
+            "type": "file",
+            "name": "robots.txt",
+            "size": 67,
+            "hash": "90d24bc3bf698ac1e173739502298ccca72adf1f564fab05f484b8c48d1cadd2"
+        },
+        {
+            "type": "folder",
+            "name": "static"
+        },
+        {
+            "type": "folder",
+            "name": "static/css"
+        },
+        {
+            "type": "folder",
+            "name": "static/js"
+        },
+        {
+            "type": "file",
+            "name": "static/css/main.8b73113c.css",
+            "size": 245846,
+            "hash": "4b50ea1be7dd9ed771e27cc16ac91789af32bdab30b3f8cb4c16fe30acb7de2f"
+        },
+        {
+            "type": "file",
+            "name": "static/css/main.8b73113c.css.map",
+            "size": 542905,
+            "hash": "6adcea93c7775f207a39194ea87e8d81c1ec22ccfb30e2c92622e5b7b523ca9a"
+        },
+        {
+            "type": "file",
+            "name": "static/js/main.b2d13d6d.js",
+            "size": 188228,
+            "hash": "e528aeba1e07c147d84907b4346e31d3f47e19736dfa4a0279946f2e6f317430"
+        },
+        {
+            "type": "file",
+            "name": "static/js/main.b2d13d6d.js.LICENSE.txt",
+            "size": 1093,
+            "hash": "f72b70d54099a9b8c94024b8bfa19473b1743e586606eab506785256baa0c7ef"
+        },
+        {
+            "type": "file",
+            "name": "static/js/main.b2d13d6d.js.map",
+            "size": 565222,
+            "hash": "85a0527dbe719322f7a68efe45c41fb2429560f4100dda0849ab016f9aa35654"
+        }
+    ]
+}
