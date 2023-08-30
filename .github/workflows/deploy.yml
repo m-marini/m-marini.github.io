@@ -30,7 +30,7 @@ jobs:
       with:
         server: www.mmarini.org
         username: marco.marini
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.FTP_KEY }}
         local-dir: build # This folder is NOT going to upload by default unless you add it to .git-ftp-include    
     - name: Deploy gh-pages
       uses: JamesIves/github-pages-deploy-action@3.7.1
